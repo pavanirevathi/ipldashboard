@@ -74,7 +74,7 @@ class TeamMatches extends Component {
     const {recentMatches} = teamMatchesData
 
     return (
-      <ul className="recent-matches-list mb-0">
+      <ul className='recent-matches-list mb-0'>
         {recentMatches.map(recentMatch => (
           <MatchCard matchDetails={recentMatch} key={recentMatch.id} />
         ))}
@@ -87,14 +87,14 @@ class TeamMatches extends Component {
     const {teamBannerURL, latestMatch} = teamMatchesData
 
     return (
-      <div className="responsive-container">
-        <img src={teamBannerURL} alt="team banner" className="team-banner" />
+      <div className='responsive-container'>
+        <img src={teamBannerURL} alt='team banner' className='team-banner' />
         <LatestMatch latestMatchData={latestMatch} />
-        <h1 className="latest-match-heading mt-3">Team Statistics</h1>
+        <h1 className='latest-match-heading mt-3'>Team Statistics</h1>
         <PieChart data={this.generatePieChartData()} />
         {this.renderRecentMatchesList()}
-        <Link to="/">
-          <button type="button" className="btn btn-outline-info mb-2">
+        <Link to='/'>
+          <button type='button' className='btn btn-outline-info mb-2'>
             Back
           </button>
         </Link>
@@ -103,8 +103,8 @@ class TeamMatches extends Component {
   }
 
   renderLoader = () => (
-    <div data-testid="loader" className="loader-container">
-      <Loader type="Oval" color="#ffffff" height={50} />
+    <div data-testid='loader' className='loader-container'>
+      <Loader type='Oval' color='#ffffff' height={50} />
     </div>
   )
 
